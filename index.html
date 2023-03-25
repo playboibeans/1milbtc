@@ -8,61 +8,71 @@
     <title>One Million Dollar BTC</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
-<body>
+
+
+<body id="content">
     <h1 id="title">ARE WE THERE YET?</h1>
-    <h2>It has been around <span id="times"></span> since the day bitcoin was released. <br>
-        Which is around <span id="days"></span> days or <span id="months"></span> months.
-    </h2>
-    <h2>
-        The current <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">bitcoin</a> price is $<span
-            id="price"></span>
-        USD and is still $<span id="priceDiff"></span> away from
-        <a href="https://twitter.com/balajis/status/1636797265317867520?s=20" target="_blank">one
-            million USD</a>.
-    </h2>
+    <div id="stats">
+        <h2>It has been around <span id="times" style="font-size: 40px; font-weight: 900;"></span> since the day bitcoin
+            was released.
+            <br>
+            Which is around <span id="days" style="font-size: 40px;font-weight: 900;"></span> or <span id="months"
+                style="font-size: 40px;font-weight: 900;"></span>.
+        </h2>
+        <h2> The current <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">bitcoin</a>
+            price is
+            $<span id="price" style="font-size: 40px;font-weight: 900;"></span> and is still $<span id="priceDiff"
+                style="font-size: 40px;font-weight: 900;"></span> away from
+            <a href="https://twitter.com/balajis/status/1636797265317867520?s=20" target="_blank"
+                style="font-size: 40px;font-weight: 900;">one
+                million USD</a>.
+        </h2>
+        <div id="progress">
+            <h3 style="font-style: italic;">Status bar not working yet</h3>
+            <div class="progress-bar" data-progress="75">
+                <div class="progress-value"></div>
+            </div>
+            <div id="priceText" style="font-size: 20px; font-weight: 900;">
+                <p>$0</p>
+                <p>$1,000,000</p>
+            </div>
+        </div>
+    </div>
 
-    <script>
-
-        function countDays() {
-            var startDate = new Date("2009-01-03");
-            var today = new Date();
-
-            var timeDiffFLoor = Math.abs(today.getTime() - startDate.getTime());
-            var yearsDiffFLoor = Math.floor(timeDiffFLoor / (1000 * 60 * 60 * 24 * 365.25));
-            timeDiffFLoor -= yearsDiffFLoor * (1000 * 60 * 60 * 24 * 365.25);
-            var monthsDiffFLoor = Math.floor(timeDiffFLoor / (1000 * 60 * 60 * 24 * 30.4375));
-            timeDiffFLoor -= monthsDiffFLoor * (1000 * 60 * 60 * 24 * 30.4375);
-            var daysDiffFloor = Math.floor(timeDiffFLoor / (1000 * 60 * 60 * 24));
-            document.getElementById("times").innerHTML = yearsDiffFLoor + " years " + monthsDiffFLoor + " months and " + daysDiffFloor + " days "
-
-            var timeDiff = Math.abs(today.getTime() - startDate.getTime());
-            var daysDiff = Math.round(timeDiff / (1000 * 3600 * 24));
-            var monthsDiff = Math.round(timeDiff / (1000 * 3600 * 24 * 30.4375));
-            document.getElementById("days").innerHTML = daysDiff.toLocaleString();
-            document.getElementById("months").innerHTML = monthsDiff.toLocaleString();
-        }
-        countDays()
-
-        function btcPrice() {
-            axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD")
-                .then(result => {
-                    const bitcoin = result.data.bitcoin.usd
-                    document.getElementById("price").innerHTML = bitcoin.toLocaleString()
-                    const priceDiff = 1000000 - result.data.bitcoin.usd
-                    document.getElementById("priceDiff").innerHTML = priceDiff.toLocaleString()
+    <footer style="padding: 10px; margin: 0">
+        <p style="padding: 0; margin: 0"><a href="https://twitter.com/19798eth" target="_blank">@19798eth</a></p>
+    </footer>
 
 
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+    <!-- <div class="blockquote">
+            <blockquote class="twitter-tweet" data-theme="light">
+                <p lang="en" dir="ltr">I will take that bet.<br>You buy 1 BTC.<br>I will send $1M USD.<br>This is ~40:1
+                    odds
+                    as
+                    1 BTC is worth ~$26k.<br>The term is 90 days.<br>All we need is a mutually agreed custodian who will
+                    still
+                    be there to settle this in the event of digital dollar devaluation.<br>If someone knows how to do
+                    this…
+                    <a href="https://t.co/hhPr522PQu">https://t.co/hhPr522PQu</a> <a
+                        href="https://t.co/6Aav9KeJpe">pic.twitter.com/6Aav9KeJpe</a>
+                </p>&mdash; Balaji (@balajis) <a
+                    href="https://twitter.com/balajis/status/1636797265317867520?ref_src=twsrc%5Etfw">March 17, 2023</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-        }
-        btcPrice()
-    </script>
+        </div> -->
+
+
 </body>
+
+
+
+<script src="scripts.js"></script>
+
+
+
 
 </html>

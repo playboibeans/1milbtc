@@ -1,0 +1,19 @@
+body {
+    background-color: #f2a900;
+    color: #4d4d4e;
+    text-align: center;
+
+}
+
+#title {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

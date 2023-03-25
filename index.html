@@ -6,10 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Million Dollar BTC</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-    <h1>How Far Are We From One Million Dollar</h1>
+    <h1 id="title">ARE WE THERE YET?</h1>
+    <h2>It has been around <span id="times"></span> since the day bitcoin was released. <br>
+        Which is around <span id="days"></span> days or <span id="months"></span> months.
+    </h2>
+    <h2>
+        The current <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">bitcoin</a> price is $<span
+            id="price"></span>
+        USD and is still $<span id="priceDiff"></span> away from
+        <a href="https://twitter.com/balajis/status/1636797265317867520?s=20" target="_blank">one
+            million USD</a>.
+    </h2>
+
+    <script>
+
+        function countDays() {
+            var startDate = new Date("2009-01-03");
+            var today = new Date();
+
+            var timeDiffFLoor = Math.abs(today.getTime() - startDate.getTime());
+            var yearsDiffFLoor = Math.floor(timeDiffFLoor / (1000 * 60 * 60 * 24 * 365.25));
+            timeDiffFLoor -= yearsDiffFLoor * (1000 * 60 * 60 * 24 * 365.25);
+            var monthsDiffFLoor = Math.floor(timeDiffFLoor / (1000 * 60 * 60 * 24 * 30.4375));
+            timeDiffFLoor -= monthsDiffFLoor * (1000 * 60 * 60 * 24 * 30.4375);
+            var daysDiffFloor = Math.floor(timeDiffFLoor / (1000 * 60 * 60 * 24));
+            document.getElementById("times").innerHTML = yearsDiffFLoor + " years " + monthsDiffFLoor + " months and " + daysDiffFloor + " days "
+
+            var timeDiff = Math.abs(today.getTime() - startDate.getTime());
+            var daysDiff = Math.round(timeDiff / (1000 * 3600 * 24));
+            var monthsDiff = Math.round(timeDiff / (1000 * 3600 * 24 * 30.4375));
+            document.getElementById("days").innerHTML = daysDiff.toLocaleString();
+            document.getElementById("months").innerHTML = monthsDiff.toLocaleString();
+        }
+        countDays()
+
+        function btcPrice() {
+            axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD")
+                .then(result => {
+                    const bitcoin = result.data.bitcoin.usd
+                    document.getElementById("price").innerHTML = bitcoin.toLocaleString()
+                    const priceDiff = 1000000 - result.data.bitcoin.usd
+                    document.getElementById("priceDiff").innerHTML = priceDiff.toLocaleString()
+
+
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+
+        }
+        btcPrice()
+    </script>
 </body>
 
 </html>

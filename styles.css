@@ -31,7 +31,7 @@ body {
     justify-content: space-evenly;
     text-align: center;
     flex: 1;
-    padding: 0px 150px;
+    padding: 0px 50px;
 
 }
 
@@ -59,15 +59,13 @@ a:hover {
 
 
 
-.twitter-tweet {
-    display: block;
-    margin: auto;
-}
+
 
 
 
 #progressBarContainer {
     display: flex;
+    align-items: center;
 }
 
 #progress {
@@ -147,12 +145,10 @@ a:hover {
 
 
 
-/* .status-bar::before {
-    position: absolute;
-    top: 0;
-    left: 80%;
-    transform: translateX(-50%);
-    width: 5px;
-    height: 100%;
-    background-color: black;
-} */
+
+
+.responsive {
+    max-width: 50%;
+    height: AUTO;
+    border-radius: 10PX;
+}

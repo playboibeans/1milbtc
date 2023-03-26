@@ -1,8 +1,7 @@
 body {
-    text-align: center;
     background-color: #f2a900;
     color: #4d4d4e;
-    font-family: "Alkatra", "Space Grotesk", monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0 50px;
     margin: 0;
     height: 100vh;
@@ -11,11 +10,11 @@ body {
 #content {
     display: flex;
     flex-direction: column;
-
 }
 
 
 #title {
+    text-align: center;
     margin: 0;
     padding: 0;
     font-size: 100px;
@@ -23,9 +22,17 @@ body {
 
 }
 
-h2 {
-    font-size: 30px;
-    font-weight: 500;
+#stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    flex: 1;
+}
+
+#stats h2 {
+    font-size: 38px;
+    font-weight: 700;
 
 }
 
@@ -38,9 +45,10 @@ a:hover {
     color: whitesmoke;
 }
 
-#stats {
-    flex: 1;
-}
+
+
+
+
 
 /* .blockquote {
 
@@ -54,35 +62,92 @@ a:hover {
 } */
 
 
+#progressBarContainer {
+    display: flex;
+}
+
 #progress {
-    padding: 50px 250px;
+    flex: 10 1 auto;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
 }
 
+#pBShrink {
+    flex: 1 2 auto;
+}
+
 #priceText {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    font-size: 20px;
+    font-weight: 900;
+    text-align: end;
 }
 
-.progress-bar {
+#priceText p {
+    margin: 10px 0;
+}
+
+
+
+.status-bar {
+    position: relative;
+    height: 50px;
     width: 100%;
-    height: 30px;
     background-color: whitesmoke;
-    border-radius: 25px;
-    overflow: hidden;
+    border-radius: 5px;
 }
 
-.progress-value {
+.status-bar-fill {
+    position: absolute;
     height: 100%;
+    width: auto;
     background-color: #4d4d4e;
-    width: 0%;
+    border-radius: 5px;
+    transition: width 0.5s ease-out;
 }
 
-.progress-bar[data-progress] .progress-value {
-    width: calc(var(--progress) * 1%);
+
+.status-bar-value {
+    position: absolute;
+    top: -40px;
+    font-size: 20px;
+    font-weight: 900;
+    white-space: nowrap
 }
 
-.progress-bar[data-progress="75"] {
-    --progress: 76;
+
+
+
+.status-bar-ath {
+    position: absolute;
+    border-right: 4px dashed #f20049;
+    height: 100%;
+    width: auto;
+    padding-bottom: 50px;
 }
+
+.status-bar-ath p {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 900;
+    right: 0;
+    bottom: 0;
+    color: #f20049;
+    margin-right: -45px;
+    margin-bottom: -50px;
+}
+
+
+
+
+/* .status-bar::before {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: black;
+} */

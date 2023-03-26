@@ -22,9 +22,28 @@ function btcPrice() {
     axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD")
         .then(result => {
             const bitcoin = result.data.bitcoin.usd
-            document.getElementById("price").innerHTML = bitcoin.toLocaleString()
+            document.getElementById("price").innerHTML = `$${bitcoin.toLocaleString()}`;
             const priceDiff = 1000000 - result.data.bitcoin.usd
-            document.getElementById("priceDiff").innerHTML = priceDiff.toLocaleString()
+            document.getElementById("priceDiff").innerHTML = `$${priceDiff.toLocaleString()}`;
+
+            const BITCOIN_PRICE = bitcoin;
+            const BITCOIN_ATH = 69044;
+            const TARGET_PRICE = 1000000;
+
+            const statusBar = document.querySelector('.status-bar');
+            const statusBarFill = statusBar.querySelector('.status-bar-fill');
+            const statusBarAth = statusBar.querySelector('.status-bar-ath');
+            const statusBarValue = statusBar.querySelector('.status-bar-value');
+
+            const percentComplete = BITCOIN_PRICE / TARGET_PRICE;
+            const percentString = `${(percentComplete * 100).toFixed(2)}%`;
+            const percentAthComplete = BITCOIN_ATH / TARGET_PRICE;
+            const percentAthString = `${(percentAthComplete * 100).toFixed(2)}%`;
+
+
+            statusBarFill.style.width = percentString;
+            statusBarAth.style.width = percentAthString;
+            // statusBarValue.textContent = `$${BITCOIN_PRICE.toLocaleString()} (${percentString})`;
 
 
         })
@@ -34,3 +53,10 @@ function btcPrice() {
 
 }
 btcPrice()
+
+// Example usage
+
+
+
+
+

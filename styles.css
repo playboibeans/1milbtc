@@ -1,7 +1,7 @@
 body {
     background-color: #f2a900;
     color: #4d4d4e;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Lexend, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -95,7 +95,7 @@ a:hover {
 
 .status-bar {
     position: relative;
-    height: 50px;
+    height: 30px;
     width: 100%;
     background-color: whitesmoke;
     border-radius: 5px;

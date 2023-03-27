@@ -43,7 +43,7 @@ function btcPrice() {
 
             statusBarFill.style.width = percentString;
             statusBarAth.style.width = percentAthString;
-            // statusBarValue.textContent = `$${BITCOIN_PRICE.toLocaleString()} (${percentString})`;
+            statusBarValue.textContent = `${percentString}`;
 
 
         })

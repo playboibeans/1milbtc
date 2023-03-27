@@ -17,7 +17,7 @@ body {
 #title {
     text-align: center;
     margin: 0;
-    padding: 15px 0;
+    padding: 15px 15px;
     background-color: #4d4d4e;
     color: whitesmoke;
 }
@@ -111,14 +111,15 @@ a:hover {
 
 
 .status-bar-value {
+    background-color: whitesmoke;
+    padding: 2px 5px;
+    border-radius: 5px;
     position: absolute;
     top: -40px;
     font-size: 20px;
     font-weight: 900;
-    white-space: nowrap
+    white-space: nowrap;
 }
-
-
 
 
 .status-bar-ath {
@@ -138,11 +139,6 @@ a:hover {
     margin-right: -45px;
     margin-bottom: -50px;
 }
-
-
-
-
-
 
 .responsive {
     max-width: 50%;

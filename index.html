@@ -3,33 +3,24 @@
 
 <head>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2XBLMY27H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-C2XBLMY27H');
     </script>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Check in to see if $BTC hits $1M USD yet.">
-
-
     <title>One Million Dollar BTC</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="scripts.js"></script>
-    <script src="priceChart.js"></script>
     <link rel="stylesheet" href="styles.css">
+
 </head>
-
-
 
 <body id="content">
     <h1 id="title" style=" font-size: 100px;font-weight: 900; padding-bottom: 0;">ARE WE THERE <a
@@ -64,20 +55,17 @@
                 <div id="priceText">
                     <p>$1,000,000</p>
                 </div>
-
-
             </div>
             <div id="pBShrink"></div>
         </div>
 
-        <canvas id="priceChart"></canvas>
-
     </div>
-    <footer style="padding: 10px; margin: 0;">
-        <p style="padding: 0; margin: 0;text-align: center;"><a href="https://twitter.com/19798eth"
-                target="_blank">@19798eth</a></p>
+    <footer>
+        <p id="pb"><a href="https://twitter.com/19798eth" target="_blank">@19798eth</a></p>
+        <p id="coinGecko"><a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">Data provided by
+                CoinGecko</a></p>
     </footer>
 </body>
-
+<script src="scripts.js"></script>
 
 </html>

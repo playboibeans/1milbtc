@@ -51,15 +51,6 @@ a:hover {
     color: whitesmoke;
 }
 
-
-
-
-
-
-
-
-
-
 #progressBarContainer {
     display: flex;
     align-items: center;
@@ -77,8 +68,7 @@ a:hover {
 }
 
 #priceText {
-    /* display: flex;
-    justify-content: space-between; */
+
     font-size: 20px;
     font-weight: 900;
     text-align: end;
@@ -110,16 +100,7 @@ a:hover {
 }
 
 
-.status-bar-value {
-    /* background-color: whitesmoke;
-    padding: 2px 5px; */
-    border-radius: 5px;
-    position: absolute;
-    top: -40px;
-    font-size: 20px;
-    font-weight: 900;
-    white-space: nowrap;
-}
+
 
 
 .status-bar-ath {
@@ -144,4 +125,23 @@ a:hover {
     max-width: 50%;
     height: AUTO;
     border-radius: 10PX;
+}
+
+#chartBox {
+    padding: 10px;
+    position: relative;
+    align-self: center;
+
+}
+
+footer {
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
 }

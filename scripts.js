@@ -1,3 +1,4 @@
+
 function countDays() {
     var startDate = new Date("2009-01-03");
     var today = new Date();
@@ -33,7 +34,6 @@ function btcPrice() {
             const statusBar = document.querySelector('.status-bar');
             const statusBarFill = statusBar.querySelector('.status-bar-fill');
             const statusBarAth = statusBar.querySelector('.status-bar-ath');
-            const statusBarValue = statusBar.querySelector('.status-bar-value');
 
             const percentComplete = BITCOIN_PRICE / TARGET_PRICE;
             const percentString = `${(percentComplete * 100).toFixed(2)}%`;
@@ -43,7 +43,6 @@ function btcPrice() {
 
             statusBarFill.style.width = percentString;
             statusBarAth.style.width = percentAthString;
-            // statusBarValue.textContent = `${percentString}`;
 
 
         })
@@ -53,8 +52,6 @@ function btcPrice() {
 
 }
 btcPrice()
-
-// Example usage
 
 
 

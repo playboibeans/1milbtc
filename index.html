@@ -20,8 +20,12 @@
 
     <meta name="description" content="Check in to see if $BTC hits $1M USD yet.">
 
+
     <title>One Million Dollar BTC</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="scripts.js"></script>
+    <script src="priceChart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -51,7 +55,6 @@
             <div id="progress">
                 <h2 style="margin: 10px; color: inherit;">$1,000,000 Progress Bar</h2>
                 <div class="status-bar">
-                    <!-- <div class="status-bar-value"></div> -->
                     <div class="status-bar-fill"></div>
                     <div class="status-bar-ath">
                         <p>ATH<br>$69,044</p>
@@ -59,7 +62,6 @@
                 </div>
 
                 <div id="priceText">
-                    <!-- <p>$0</p> -->
                     <p>$1,000,000</p>
                 </div>
 
@@ -67,43 +69,15 @@
             </div>
             <div id="pBShrink"></div>
         </div>
+
+        <canvas id="priceChart"></canvas>
+
     </div>
-
-    <!-- <div class="blockquote">
-
-        <blockquote class="twitter-tweet" data-theme="light">
-            <p lang="en" dir="ltr">I will take that bet.<br>You buy 1 BTC.<br>I will send $1M USD.<br>This is ~40:1
-                odds
-                as
-                1 BTC is worth ~$26k.<br>The term is 90 days.<br>All we need is a mutually agreed custodian who will
-                still
-                be there to settle this in the event of digital dollar devaluation.<br>If someone knows how to do
-                this…
-                <a href="https://t.co/hhPr522PQu">https://t.co/hhPr522PQu</a> <a
-                    href="https://t.co/6Aav9KeJpe">pic.twitter.com/6Aav9KeJpe</a>
-            </p>&mdash; Balaji (@balajis) <a
-                href="https://twitter.com/balajis/status/1636797265317867520?ref_src=twsrc%5Etfw">March 17, 2023</a>
-        </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-    </div> -->
-
     <footer style="padding: 10px; margin: 0;">
         <p style="padding: 0; margin: 0;text-align: center;"><a href="https://twitter.com/19798eth"
                 target="_blank">@19798eth</a></p>
     </footer>
-
-
-
-
-
 </body>
-
-
-
-<script src="scripts.js"></script>
-
 
 
 </html>

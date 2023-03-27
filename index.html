@@ -29,14 +29,12 @@
     </h2>
     <div id="stats">
         <h2>It has been <span id="times" style="font-size: 40px; font-weight: 900;"></span> since the day bitcoin
-            was released.</h2>
-        <h2>
-            Which is around <span id="days" style="font-size: 40px;font-weight: 900;"></span> or <span id="months"
-                style="font-size: 40px;font-weight: 900;"></span>.
+            was released.<br>
+            (<span id="days"></span> or <span id="months"></span>)
         </h2>
-        <h2> The current <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">bitcoin</a>
-            price is <span id="price" style="font-size: 40px;font-weight: 900;"></span> and is still <span
-                id="priceDiff" style="font-size: 40px;font-weight: 900;"></span> away from
+        <h2> The current price of <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">bitcoin</a>
+            is <span id="price" style="font-size: 40px;font-weight: 900;"></span> and is still <span id="priceDiff"
+                style="font-size: 40px;font-weight: 900;"></span> away from
             <a href="https://twitter.com/balajis/status/1636797265317867520?s=20" target="_blank"
                 style="font-size: 40px;font-weight: 900;">One
                 Million USD</a>.
@@ -44,7 +42,11 @@
         <div id="progressBarContainer">
             <div id="pBShrink"></div>
             <div id="progress">
+
                 <h2 style="margin: 10px; color: inherit;">$1,000,000 Progress Bar</h2>
+                <div id="priceText">
+                    <p>$1,000,000</p>
+                </div>
                 <div class="status-bar">
                     <div class="status-bar-fill"></div>
                     <div class="status-bar-ath">
@@ -52,18 +54,47 @@
                     </div>
                 </div>
 
-                <div id="priceText">
-                    <p>$1,000,000</p>
-                </div>
+
             </div>
             <div id="pBShrink"></div>
         </div>
+    </div>
+    <div id="athStats">
+        <h2 style="font-size: 50px;">Seems a bit far away still...<br>How about the last ATH then?</h2>
+        <h2>Bitcoin hit its all time high price of <span style="font-size: 40px;font-weight: 900;">$69,044</span> <span
+                style="font-style: italic;">(nice)</span>
+            on Nov 10, 2021.</h2>
+        <h2>Which is around <span id="athTimes" style="font-size: 40px;font-weight: 900;"></span> ago.<br>(<span
+                id="athDays"></span> or <span id="athMonths"></span>)</h2>
+
+        <h2> We are still <span id="athPriceDiff" style="font-size: 40px;font-weight: 900;"></span> away
+            from the last all time high</a>.
+        </h2>
+        <div id="progressBarContainer">
+            <div id="pBShrink"></div>
+            <div id="progress">
+                <h2 style="margin: 10px; color: inherit;">ATH Progress Bar</h2>
+                <div id="priceText">
+                    <p>$69,044</p>
+                </div>
+                <div class="ath-status-bar">
+                    <div class="ath-status-bar-fill">
+                        <p id="athBarPrice"></p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="pBShrink"></div>
+        </div>
+    </div>
 
     </div>
     <footer>
         <p id="pb"><a href="https://twitter.com/19798eth" target="_blank">@19798eth</a></p>
-        <p id="coinGecko"><a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">Data provided by
-                CoinGecko</a></p>
+        <p id="coinGecko">Data provided by free tier <a href="https://www.coingecko.com/en/coins/bitcoin"
+                target="_blank">CoinGecko</a> api so the data is not very responsive and suffers from limited rate.</p>
+
     </footer>
 </body>
 <script src="scripts.js"></script>

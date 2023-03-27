@@ -1,5 +1,7 @@
 body {
-    background-color: #f2a900;
+
+    background-color: #4d4d4e;
+
     color: #4d4d4e;
     font-family: Lexend, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
@@ -17,7 +19,7 @@ body {
 #title {
     text-align: center;
     margin: 0;
-    padding: 15px 15px;
+    padding: 40px 15px;
     background-color: #4d4d4e;
     color: whitesmoke;
 }
@@ -28,11 +30,23 @@ body {
     justify-content: space-evenly;
     text-align: center;
     flex: 1;
-    padding: 0px 50px;
+    padding: 120px 50px 60px 50px;
+    background-color: #f2a900;
 
 }
 
-#stats h2 {
+
+#athStats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    flex: 1;
+    padding: 60px 50px 120px 50px;
+}
+
+#stats h2,
+#athStats h2 {
     font-size: 30px;
     font-weight: 700;
 
@@ -54,6 +68,8 @@ a:hover {
 #progressBarContainer {
     display: flex;
     align-items: center;
+    color: #4d4d4e;
+
 }
 
 #progress {
@@ -76,6 +92,8 @@ a:hover {
 
 #priceText p {
     margin: 10px 0;
+    color: #4d4d4e;
+
 }
 
 
@@ -85,7 +103,7 @@ a:hover {
     height: 30px;
     width: 100%;
     background-color: whitesmoke;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .status-bar-fill {
@@ -93,10 +111,10 @@ a:hover {
     height: 100%;
     width: auto;
     background-color: #4d4d4e;
-    border-radius: 5px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    transition: width 0.5s ease-out;
+    border-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
 }
 
 
@@ -105,10 +123,12 @@ a:hover {
 
 .status-bar-ath {
     position: absolute;
-    border-right: 4px dashed;
+    border-right: 4px solid;
     height: 100%;
     width: auto;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    color: #4d4d4e;
+
 }
 
 .status-bar-ath p {
@@ -119,7 +139,41 @@ a:hover {
     bottom: 0;
     margin-right: -45px;
     margin-bottom: -50px;
+    color: #4d4d4e;
+
 }
+
+
+.ath-status-bar {
+
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+
+.ath-status-bar-fill {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    background-color: #4d4d4e;
+    border-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+
+.ath-status-bar-fill p {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 900;
+    right: 0;
+    margin-top: 40px;
+    margin-right: -80px;
+    color: #4d4d4e;
+}
+
 
 .responsive {
     max-width: 50%;
@@ -135,13 +189,24 @@ a:hover {
 }
 
 footer {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     margin: 0;
-    display: flex;
+    background-color: #4d4d4e;
+
 }
+
+
 
 footer p {
     padding: 0;
     margin: 0;
+    color: whitesmoke;
+}
+
+#athStats {
+    background-color: #eeb42c;
 }

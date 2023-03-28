@@ -1,3 +1,9 @@
+window.addEventListener('load', function () {
+    btcPrice();
+    athDays();
+    countDays();
+});
+
 
 function countDays() {
     var startDate = new Date("2009-01-03");
@@ -17,7 +23,6 @@ function countDays() {
     document.getElementById("days").innerHTML = daysDiff.toLocaleString() + " days";
     document.getElementById("months").innerHTML = monthsDiff.toLocaleString() + " months";
 }
-countDays()
 
 function athDays() {
     var lastAth = new Date('2021-11-10');
@@ -38,7 +43,6 @@ function athDays() {
     document.getElementById("athMonths").innerHTML = monthsDiff.toLocaleString() + " months";
 }
 
-athDays()
 
 function btcPrice() {
     axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD")
@@ -85,7 +89,7 @@ function btcPrice() {
         });
 
 }
-btcPrice()
+
 
 
 

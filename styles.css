@@ -3,6 +3,8 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 20%;
     background-color: black;
+    background-attachment: fixed;
+
     color: whitesmoke;
     font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, ' Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, ' Open Sans', ' Helvetica Neue', sans-serif;
     padding: 0;

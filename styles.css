@@ -23,53 +23,44 @@ body {
     text-align: center;
     margin: 0;
     padding: 40px 15px;
-    text-shadow: 0 0 10px whitesmoke;
+    text-shadow: 0 0 8px whitesmoke;
 
 }
 
 #stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    align-self: center;
     text-align: center;
-    width: auto;
-    line-height: 69.42px;
-    margin: 50px auto;
-    gap: 50px;
+    line-height: 40px;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: transparent;
+    color: whitesmoke;
+    box-shadow: 0 0 10px 10px whitesmoke;
+    text-shadow: 0px 0px 8.5px whitesmoke;
+
+}
+
+#stats:hover {
+    background-image: url(bg2.gif);
+    text-shadow: 0px 0px 6px black;
+
 }
 
 .twitter-tweet {
-    margin: auto;
+    align-self: center !important;
     border-radius: 15px !important;
     box-shadow: 0 0 10px 10px whitesmoke !important;
+    width: 80% !important;
+    max-width: 500px !important;
+    margin: 50px 0 !important;
 }
 
 
-#stats h2 {
-    padding: 20px;
-    border-radius: 25px;
-    font-size: 30px;
-    font-weight: 700;
-    background-color: whitesmoke;
-    color: #383839;
-    box-shadow: 0 0 10px 10px whitesmoke;
-    margin: 0;
-}
-
-#stats h2:hover {
-    padding: 20px;
-    border-radius: 25px;
-    font-size: 30px;
-    font-weight: 700;
-    background-image: url(bg2.gif);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-color: #383839;
-    color: whitesmoke;
-    box-shadow: 0 0 10px 10px whitesmoke;
-    text-shadow: 0px 0px 10px black;
-    margin: 0;
-}
 
 
 a {
@@ -82,7 +73,7 @@ a {
     width: 80%;
     margin: 10px auto 10px auto;
     color: whitesmoke;
-    text-shadow: 0 0 10px whitesmoke;
+    text-shadow: 0 0 8.5px whitesmoke;
 }
 
 #progress h2 {

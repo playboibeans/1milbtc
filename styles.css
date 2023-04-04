@@ -1,5 +1,5 @@
 body {
-    background-image: url(bg3.jpeg);
+    background-image: url(bg3.webp);
     background-repeat: no-repeat;
     background-position: 50% 20%;
     background-color: black;
@@ -43,7 +43,7 @@ body {
 }
 
 
-/* #stats h2 {
+#stats h2 {
     padding: 20px;
     border-radius: 25px;
     font-size: 30px;
@@ -52,9 +52,9 @@ body {
     color: #383839;
     box-shadow: 0 0 10px 10px whitesmoke;
     margin: 0;
-} */
+}
 
-#stats h2 {
+#stats h2:hover {
     padding: 20px;
     border-radius: 25px;
     font-size: 30px;

@@ -26,31 +26,37 @@
 </head>
 
 <body id="content">
-    <h1 id="title" style=" font-size: 100px;font-weight: 900; padding-bottom: 0;">ARE WE THERE YET?</h1>
-    <h2 id="title" style=" font-size: 30px;font-weight: 700; padding-top: 0;">Check in to see if $BTC hits $1M USD yet.
-    </h2>
+    <div style="width: 80%; align-self: center;">
+        <h1 id="title1" style=" font-size: 100px;font-weight: 900; padding-bottom: 0;">ARE WE THERE YET?</h1>
+        <h2 id="title2" style=" font-size: 30px;font-weight: 700; padding-top: 0;">Check in to see if $BTC hits $1M USD
+            yet.
+        </h2>
+    </div>
 
     <div style="display: flex; flex-direction: column; justify-content: space-evenly; padding: 10px 20px;">
         <div id="progress">
-            <h2 style="margin: 10px; color: inherit;">$1,000,000 Progress Bar</h2>
+            <h2><span style="color: red;text-shadow: 0 0 10px red;">Current
+                    Price: <span id="price"></span></span>$1,000,000</h2>
             <div class="status-bar">
                 <div class="status-bar-fill"></div>
-                <div class="status-bar-ath">
-                    <p>ATH<br>$69,044</p>
+                <div class="status-bar-remain" style="font-size: 20px;font-weight: 900;"><span id="priceDiff"></span> to
+                    go
                 </div>
+                <!-- <div class="status-bar-ath">
+                    <p>ATH<br>$69,044</p>
+                </div> -->
             </div>
         </div>
         <div style="display: flex; justify-content: space-evenly;  flex-wrap: wrap;">
             <div id="stats">
-                <h2>It has been<br> <span id="times" style="font-size: 40px; font-weight: 900;"></span><br>since the day
+                <h2><span id="times" style="font-size: 40px; font-weight: 900;"></span><br>since the day
                     bitcoin
-                    was released.<br>
+                    was released<br>
                     (<span id="days"></span> or <span id="months"></span>)
                 </h2>
-                <h2> The current price of bitcoin is <span id="price"
-                        style="font-size: 40px;font-weight: 900;"></span><br>
-                    and is
-                    still <span id="priceDiff" style="font-size: 40px;font-weight: 900;"></span>away from<br>
+                <h2>Current price of bitcoin is <span id="price2"
+                        style="font-size: 40px;font-weight: 900;"></span><br><span id="priceDiff2"
+                        style="font-size: 40px;font-weight: 900;"></span>away from<br>
                     <span style="font-size: 40px;font-weight: 900;">One
                         Million USD</span>.
                 </h2>
@@ -75,9 +81,11 @@
 
 
     <footer>
-        <p id="pb"><a href="https://twitter.com/19798eth" target="_blank">@19798eth</a> | Data provided by <a
+        <p id="pb"><a href="https://twitter.com/19798eth" target="_blank">@19798eth</a> | <a
                 href="https://www.coingecko.com/en/coins/bitcoin" target="_blank">CoinGecko</a> | <a
-                href="https://unsplash.com/photos/LUpDjlJv4_c" target="_blank">Background image</a>
+                href="https://cryptoath.net" target="_blank">Crypto ATH Tracker</a> | <a
+                href="https://unsplash.com/photos/LUpDjlJv4_c" target="_blank">Background image</a> | <a
+                href="https://tenor.com/zh-TW/view/blackhole-space-astronomy-gif-25036689" target="_blank">GIF</a>
         </p>
 
     </footer>

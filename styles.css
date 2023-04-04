@@ -2,8 +2,9 @@ body {
     background-image: url(bg3.jpeg);
     background-repeat: no-repeat;
     background-position: 50% 20%;
+    background-color: black;
     color: whitesmoke;
-    font-family: 'Space Grotesk', Lexend, system-ui, -apple-system, BlinkMacSystemFont, ' Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, ' Open Sans', ' Helvetica Neue', sans-serif;
+    font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, ' Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, ' Open Sans', ' Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -12,14 +13,16 @@ body {
 #content {
     display: flex;
     flex-direction: column;
-
 }
 
 
-#title {
+#title1,
+#title2 {
     text-align: center;
     margin: 0;
     padding: 40px 15px;
+    text-shadow: 0 0 10px whitesmoke;
+
 }
 
 #stats {
@@ -30,6 +33,7 @@ body {
     width: auto;
     line-height: 69.42px;
     margin: 50px auto;
+    gap: 50px;
 }
 
 .twitter-tweet {
@@ -39,29 +43,36 @@ body {
 }
 
 
-#stats h2 {
+/* #stats h2 {
     padding: 20px;
     border-radius: 25px;
     font-size: 30px;
     font-weight: 700;
     background-color: whitesmoke;
-    color: black;
+    color: #383839;
     box-shadow: 0 0 10px 10px whitesmoke;
+    margin: 0;
+} */
+
+#stats h2 {
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    background-image: url(bg2.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #383839;
+    color: whitesmoke;
+    box-shadow: 0 0 10px 10px whitesmoke;
+    text-shadow: 0px 0px 10px black;
+    margin: 0;
 }
+
 
 a {
-    /* text-decoration: none; */
     color: inherit;
 }
-
-#title a:hover {
-    color: #f2a900;
-}
-
-a:hover {
-    color: whitesmoke;
-}
-
 
 
 #progress {
@@ -69,13 +80,14 @@ a:hover {
     width: 80%;
     margin: 10px auto 10px auto;
     color: whitesmoke;
-    text-align: center;
-
+    text-shadow: 0 0 10px whitesmoke;
 }
 
-
-
-
+#progress h2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
 
 .status-bar {
     position: relative;
@@ -95,73 +107,15 @@ a:hover {
     background-color: red;
     border-radius: 5px;
     box-shadow: 0 0 5px 3px red;
-
 }
 
-
-
-
-
-.status-bar-ath {
+.status-bar-remain {
     position: absolute;
-    /* border-right: 4px solid red; */
-    height: 100%;
-    width: auto;
-    padding-bottom: 20px;
-
-}
-
-.status-bar-ath p {
-    position: absolute;
-    font-size: 20px;
-    font-weight: 900;
     right: 0;
-    bottom: 0;
-    margin-right: -45px;
-    margin-bottom: -50px;
-}
-
-
-.ath-status-bar {
-
-    position: relative;
-    height: 30px;
-    width: 100%;
-    background-color: whitesmoke;
-    border-radius: 6px;
-}
-
-.ath-status-bar-fill {
-    position: absolute;
+    top: 40px;
     height: 100%;
-    width: auto;
-    background-color: #4d4d4e;
-    border-radius: 6px;
-
-}
-
-.ath-status-bar-fill p {
-    position: absolute;
-    font-size: 20px;
-    font-weight: 900;
-    right: 0;
-    margin-top: 40px;
-    margin-right: -80px;
-    color: #4d4d4e;
-}
-
-
-.responsive {
-    max-width: 50%;
-    height: AUTO;
-    border-radius: 10PX;
-}
-
-#chartBox {
-    padding: 10px;
-    position: relative;
-    align-self: center;
-
+    text-align: center;
+    vertical-align: middle;
 }
 
 footer {
@@ -172,8 +126,8 @@ footer {
     padding: 10px;
     margin: 0;
     text-align: center;
-
-
+    max-width: 80%;
+    align-self: center;
 }
 
 
@@ -182,6 +136,8 @@ footer p {
     padding: 0;
     margin: 0;
     color: whitesmoke;
+    text-shadow: 0px 0px 10px black;
+
 }
 
 #athStats {

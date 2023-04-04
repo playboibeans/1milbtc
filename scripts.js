@@ -34,25 +34,31 @@ function btcPrice() {
             const BITCOIN_ATH = 69044;
             const TARGET_PRICE = 1000000;
             document.getElementById("price").innerHTML = `$${bitcoin.toLocaleString()}`;
+            document.getElementById("price2").innerHTML = `$${bitcoin.toLocaleString()}`;
 
             const priceDiff = 1000000 - data.bitcoin.usd
             document.getElementById("priceDiff").innerHTML = `$${priceDiff.toLocaleString()} `;
+            document.getElementById("priceDiff2").innerHTML = `$${priceDiff.toLocaleString()} `;
 
 
 
 
             const statusBar = document.querySelector('.status-bar');
             const statusBarFill = statusBar.querySelector('.status-bar-fill');
-            const statusBarAth = statusBar.querySelector('.status-bar-ath');
+            // const statusBarAth = statusBar.querySelector('.status-bar-ath');
+            const statusBarRemain = statusBar.querySelector('.status-bar-remain')
 
             const percentComplete = BITCOIN_PRICE / TARGET_PRICE;
             const percentString = `${(percentComplete * 100).toFixed(2)}% `;
-            const percentAthComplete = BITCOIN_ATH / TARGET_PRICE;
-            const percentAthString = `${(percentAthComplete * 100).toFixed(2)}% `;
+            // const percentAthComplete = BITCOIN_ATH / TARGET_PRICE;
+            // const percentAthString = `${(percentAthComplete * 100).toFixed(2)}% `;
+            const percentRemainComplete = priceDiff / TARGET_PRICE;
+            console.log(percentRemainComplete)
+            const percentRemainString = `${(percentRemainComplete * 100).toFixed(2)}% `
 
             statusBarFill.style.width = percentString;
-            statusBarAth.style.width = percentAthString;
-
+            // statusBarAth.style.width = percentAthString;
+            statusBarRemain.style.width = percentRemainString;
 
 
 

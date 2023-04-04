@@ -1,9 +1,9 @@
 body {
-
-    background-color: #4d4d4e;
-
-    color: #4d4d4e;
-    font-family: Lexend, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(bg3.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    color: whitesmoke;
+    font-family: 'Space Grotesk', Lexend, system-ui, -apple-system, BlinkMacSystemFont, ' Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, ' Open Sans', ' Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -20,8 +20,6 @@ body {
     text-align: center;
     margin: 0;
     padding: 40px 15px;
-    background-color: #4d4d4e;
-    color: whitesmoke;
 }
 
 #stats {
@@ -29,31 +27,30 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    flex: 1;
-    padding: 120px 50px 60px 50px;
-    background-color: #f2a900;
+    width: auto;
+    line-height: 69.42px;
+    margin: 50px auto;
+}
 
+.twitter-tweet {
+    margin: auto;
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px 10px whitesmoke !important;
 }
 
 
-#athStats {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    flex: 1;
-    padding: 60px 50px 120px 50px;
-}
-
-#stats h2,
-#athStats h2 {
+#stats h2 {
+    padding: 20px;
+    border-radius: 25px;
     font-size: 30px;
     font-weight: 700;
-
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 0 0 10px 10px whitesmoke;
 }
 
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: inherit;
 }
 
@@ -65,36 +62,18 @@ a:hover {
     color: whitesmoke;
 }
 
-#progressBarContainer {
-    display: flex;
-    align-items: center;
-    color: #4d4d4e;
 
-}
 
 #progress {
-    flex: 10 1 auto;
     padding: 50px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-#pBShrink {
-    flex: 1 2 auto;
-}
-
-#priceText {
-
-    font-size: 20px;
-    font-weight: 900;
-    text-align: end;
-}
-
-#priceText p {
-    margin: 10px 0;
-    color: #4d4d4e;
+    width: 80%;
+    margin: 10px auto 10px auto;
+    color: whitesmoke;
+    text-align: center;
 
 }
+
+
 
 
 
@@ -103,17 +82,19 @@ a:hover {
     height: 30px;
     width: 100%;
     background-color: whitesmoke;
-    border-radius: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px whitesmoke;
+    margin: 20px auto;
+
 }
 
 .status-bar-fill {
     position: absolute;
     height: 100%;
     width: auto;
-    background-color: #4d4d4e;
-    border-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px red;
 
 }
 
@@ -123,11 +104,10 @@ a:hover {
 
 .status-bar-ath {
     position: absolute;
-    border-right: 4px solid;
+    /* border-right: 4px solid red; */
     height: 100%;
     width: auto;
     padding-bottom: 20px;
-    color: #4d4d4e;
 
 }
 
@@ -139,8 +119,6 @@ a:hover {
     bottom: 0;
     margin-right: -45px;
     margin-bottom: -50px;
-    color: #4d4d4e;
-
 }
 
 
@@ -150,7 +128,7 @@ a:hover {
     height: 30px;
     width: 100%;
     background-color: whitesmoke;
-    border-radius: 25px;
+    border-radius: 6px;
 }
 
 .ath-status-bar-fill {
@@ -158,9 +136,7 @@ a:hover {
     height: 100%;
     width: auto;
     background-color: #4d4d4e;
-    border-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 6px;
 
 }
 
@@ -195,7 +171,6 @@ footer {
     justify-content: center;
     padding: 10px;
     margin: 0;
-    background-color: #4d4d4e;
     text-align: center;
 
 
